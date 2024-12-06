@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shareable Resume</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <!-- Resume form -->
+    <div id="formContainer">
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            <hr />
+
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" placeholder="Enter your job title" required autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required />
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn:</label>
+                <input type="url" id="linkedin" placeholder="Enter your LinkedIn URL" required />
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter your address" required />
+            </div>
+
+            <div class="form-group">
+                <label for="objective">Objective:</label>
+                <textarea id="objective" placeholder="Enter your career objective"></textarea>
+            </div>
+
+            <h2>Education</h2>
+            <hr />
+
+            <div id="education">
+                <div class="form-group">
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" placeholder="e.g., Bachelor's in Computer Science"
+                        autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label for="university">University:</label>
+                    <input type="text" id="university" placeholder="e.g., Karachi University" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label for="graduationYear">Graduation Year:</label>
+                    <input type="date" id="graduationYear" />
+                </div>
+            </div>
+
+            <h2>Experience</h2>
+            <hr />
+
+            <div id="experience">
+                <div class="form-group">
+                    <label for="jobRole">Job Role:</label>
+                    <input type="text" id="jobRole" placeholder="e.g., Software Developer" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" placeholder="e.g., ABC Corp" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label for="jobDuration">Duration:</label>
+                    <input type="text" id="jobDuration" placeholder="e.g., Jan 2020 - Dec 2022" />
+                </div>
+            </div>
+
+            <h2>Skills</h2>
+            <hr />
+
+            <div class="form-group">
+                <label for="skills">Skills (comma separated):</label>
+                <input type="text" id="skills" placeholder="e.g., HTML5, CSS3, TypeScript" />
+            </div>
+
+            <h2>Projects</h2>
+            <hr />
+
+            <div id="projects">
+                <div class="form-group">
+                    <label for="projectDetails">Project Details:</label>
+                    <input type="text" id="projectDetails" placeholder="e.g., Project Name, Description" />
+                </div>
+            </div>
+
+            <button id="generateButton" type="button">Generate Resume</button>
+        </form>
+    </div>
+
+    <!-- Resume Section -->
+    <div class="resume-section" contenteditable="true" class="hidden">
+        <div class="left-section">
+            <div class="profile-text">
+                <h2 id="displayName">Your Name</h2>
+                <span id="displayJobTitle" style="font-weight: bold">Your Job Title</span>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul style="font-weight: bold">
+                    <li>Email: <span id="displayEmail"></span></li>
+                    <li>Phone: <span id="displayPhone"></span></li>
+                    <li>LinkedIn: <span id="displayLinkedIn"></span></li>
+                    <li>Address: <span id="displayAddress"></span></li>
+                </ul>
+            </div>
+            <h3>Objective</h3>
+            <div id="displayObjective" style="text-wrap-style: pretty">
+                <p><i>Your career objective will appear here.</i></p>
+            </div>
+
+            <h3>Education</h3>
+            <div id="displayEducation">
+                <ul></ul>
+            </div>
+
+            <h3>Experience</h3>
+            <div id="displayExperience">
+                <ul></ul>
+            </div>
+
+            <h3>Skills</h3>
+            <div id="displaySkills">
+                <ul></ul>
+            </div>
+
+            <h3>Projects</h3>
+            <div id="displayProjects">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
